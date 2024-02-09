@@ -1,0 +1,159 @@
+*
+{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+:root
+{
+  --LightCyan: hsl(193, 38%, 86%);
+  --NeonGreen: hsl(150, 100%, 66%);
+
+  --containerBg-Color: #202632;
+  --cardBg-color: #313A49;
+}
+
+.wrapper
+{
+  max-width: 1440px;
+  height: 100vh;
+
+  position: relative;
+
+  background-color: var(--containerBg-Color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper .advice-card
+{
+  width: 400px;
+  min-height: 260px;
+
+  padding: 30px 30px 50px 30px;
+  background-color: var(--cardBg-color);
+
+  text-align: center;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.advice-card .advice-id
+{
+  color: var(--NeonGreen);
+  text-transform: uppercase;
+
+  font-size: 10px;
+  font-weight: bold;
+
+  letter-spacing: 5px;
+}
+
+.advice-card .advice-body
+{
+  color: var(--LightCyan);
+
+  font-size: 22px;
+  font-weight: bold;
+
+  margin: 20px 0;
+}
+
+.advice-card .divider-img img
+{
+  width: 100%;
+}
+
+.advice-card .desktop-divider
+{
+  display: block;
+}
+
+.advice-card .mobile-divider
+{
+  display: none;
+}
+
+.advice-card .advice-generator-btn
+{
+  width: 50px;
+  height: 50px;
+
+  background-color: var(--NeonGreen);
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.advice-card .advice-generator-btn:hover
+{
+  box-shadow: 0 0 28px var(--NeonGreen);
+}
+
+
+.attribution
+{
+  width: 80%;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  color: var(--LightCyan);
+  text-align: center;
+}
+
+.attribution a
+{
+  color: var(--NeonGreen);
+}
+
+
+
+
+
+@media screen and (max-width: 480px){
+  .wrapper
+  {
+    padding: 0 20px;
+  }
+
+  .wrapper .advice-card
+  {
+    padding: 20px 20px 30px 20px;
+    width: 100%;
+  }
+  
+  .advice-card .desktop-divider
+  {
+    display: none;
+  }
+
+  .advice-card .mobile-divider
+  {
+    display: block;
+  }
+
+  .attribution
+  {
+    width: 80%;
+    font-size: 12px;
+  }
+}
